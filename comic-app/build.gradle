@@ -15,11 +15,8 @@ android {
 
 dependencies {
     implementation project(':client')
-    implementation project(':client_comics')
-    implementation project(':client_marvel')
     implementation project(':base')
     implementation project(':domain')
-    implementation project(':data_marvel')
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     implementation "androidx.appcompat:appcompat:$androidxVersion"

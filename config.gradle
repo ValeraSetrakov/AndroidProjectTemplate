@@ -1,6 +1,6 @@
 ext {
-    applicationName = "Marvel"
-    applicationId = "com.comic"
+    applicationName = "Test"
+    applicationId = "com.template"
 
     versionCode = 1
     versionName = "1.0"
@@ -10,7 +10,7 @@ ext {
     debugVersionNameSuffix = ".debug"
 
     gradlePluginVersion = '4.1.1'               //https://bit.ly/2NXD4Pe
-    buildToolsVersion = "28.0.3"                //https://bit.ly/2DNmq3Y
+    buildToolsVersion = "29.0.2"                //https://bit.ly/2DNmq3Y
     versionMaterial = '1.1.0'
     versionCoordinator = '1.1.0'
     versionSwipeToRefresh = '1.1.0'

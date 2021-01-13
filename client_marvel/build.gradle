@@ -1,6 +1,0 @@
-apply from: '../commonScreenModule.gradle'
-
-dependencies {
-    implementation project(':client')
-    implementation project(':data_marvel')
-}

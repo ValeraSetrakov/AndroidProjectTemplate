@@ -1,10 +1,5 @@
-rootProject.name='marvel'
+rootProject.name='template'
 include ':comic-app',
-        ':data_marvel',
-        ':client_marvel',
         ':base',
         ':client',
-        ':domain',
-        ':client_comics',
-        ':navigation',
-        ':navigation_classic'
+        ':domain'

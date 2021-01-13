@@ -2,12 +2,11 @@ package com.comic.app.di
 
 import androidx.fragment.app.FragmentFactory
 import com.comic.client.di.fragment.BaseFragmentFactory
-import com.comic.screen_marvel.di.MarvelFragmentsModule
 import dagger.Binds
 import dagger.Module
 
 @Module(
-    includes = [MarvelFragmentsModule::class]
+    includes = []
 )
 abstract class BaseFragmentModule {
     @Binds
