@@ -1,8 +1,8 @@
 apply from: '../commonLibModule.gradle'
 
 android {
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding true
     }
 }
 
