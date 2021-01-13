@@ -1,0 +1,6 @@
+apply from: '../commonLibModule.gradle'
+
+dependencies {
+    implementation project(':base')
+    implementation project(':domain')
+}

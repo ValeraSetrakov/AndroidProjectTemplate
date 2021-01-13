@@ -1,0 +1,29 @@
+apply from: '../commonLibModule.gradle'
+
+android {
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation "androidx.appcompat:appcompat:$androidxVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$versionCoordinator"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$versionSwipeToRefresh"
+    implementation "com.google.android.material:material:$versionMaterial"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.core:core-ktx:$androidxKtxVersion"
+    implementation "androidx.fragment:fragment-ktx:$androidxKtxVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidxVersion"
+
+    implementation project(':base')
+    implementation project(':domain')
+}

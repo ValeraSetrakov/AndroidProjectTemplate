@@ -1,0 +1,5 @@
+apply from: '../commonScreenModule.gradle'
+
+dependencies {
+    implementation project(':client')
+}

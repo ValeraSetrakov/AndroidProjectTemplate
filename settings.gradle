@@ -1,0 +1,10 @@
+rootProject.name='marvel'
+include ':comic-app',
+        ':data_marvel',
+        ':client_marvel',
+        ':base',
+        ':client',
+        ':domain',
+        ':client_comics',
+        ':navigation',
+        ':navigation_classic'

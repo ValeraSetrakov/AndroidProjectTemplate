@@ -1,0 +1,5 @@
+apply from: '../commonLibModule.gradle'
+
+dependencies {
+    implementation project(':navigation')
+}
