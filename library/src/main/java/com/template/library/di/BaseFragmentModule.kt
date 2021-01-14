@@ -1,4 +1,4 @@
-package com.template.app.di
+package com.template.library.di
 
 import androidx.fragment.app.FragmentFactory
 import com.template.client.di.fragment.BaseFragmentFactory

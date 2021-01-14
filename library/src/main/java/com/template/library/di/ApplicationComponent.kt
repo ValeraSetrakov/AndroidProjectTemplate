@@ -1,11 +1,11 @@
-package com.template.app.di
+package com.template.library.di
 
-import com.template.app.App
+import com.template.library.BaseApp
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [ApplicationModule::class])
 interface ApplicationComponent {
-    fun inject(target: App)
+    fun inject(target: BaseApp)
 }

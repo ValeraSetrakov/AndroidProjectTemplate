@@ -1,4 +1,4 @@
-package com.template.app.di
+package com.template.library.di
 
 import androidx.lifecycle.ViewModelProvider
 import com.template.client.di.viewmodel.ViewModelFactory

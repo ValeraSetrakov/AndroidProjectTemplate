@@ -2,4 +2,5 @@ rootProject.name='template'
 include ':app',
         ':base',
         ':client',
-        ':domain'
+        ':domain',
+        ':library'

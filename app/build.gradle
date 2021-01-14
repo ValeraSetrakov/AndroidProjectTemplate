@@ -14,11 +14,9 @@ android {
 }
 
 dependencies {
-    implementation project(':client')
-    implementation project(':base')
-    implementation project(':domain')
+    implementation project(':library')
 
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
-    implementation "androidx.appcompat:appcompat:$androidxVersion"
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+//    implementation "androidx.appcompat:appcompat:$androidxVersion"
+//    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
 }

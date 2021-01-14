@@ -1,0 +1,29 @@
+apply from: '../commonLibModule.gradle'
+apply from: '../config.gradle'
+
+def config = extensions.getByName("ext")
+
+android {
+    defaultConfig {
+
+        versionCode config["versionCode"]
+        versionName config["versionName"]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api project(':client')
+    api project(':base')
+    api project(':domain')
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.appcompat:appcompat:$androidxVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+}
