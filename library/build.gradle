@@ -1,11 +1,12 @@
 apply from: '../commonLibModule.gradle'
 apply plugin: 'maven-publish'
+apply plugin: 'com.github.dcendents.android-maven'
 apply from: '../config.gradle'
 
 def config = extensions.getByName("ext")
 
-group = libGroup
-version = versionName
+group = 'com.template'
+version = '1.0.5'
 
 android {
     defaultConfig {
@@ -38,9 +39,9 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
-                groupId = libGroup
+                groupId = 'com.template'
                 artifactId = 'android-template'
-                version = versionName
+                version = '1.0.5'
             }
         }
     }
