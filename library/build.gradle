@@ -23,7 +23,7 @@ dependencies {
     api project(':base')
     api project(':domain')
 
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
-    implementation "androidx.appcompat:appcompat:$androidxVersion"
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    api "androidx.appcompat:appcompat:$androidxVersion"
+    api "com.squareup.retrofit2:retrofit:$retrofitVersion"
 }

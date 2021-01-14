@@ -1,4 +1,4 @@
-package com.template.library.di
+package com.template.app.di
 
 import com.template.library.BaseApp
 import dagger.Component

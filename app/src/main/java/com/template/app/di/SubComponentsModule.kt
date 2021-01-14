@@ -1,4 +1,4 @@
-package com.template.library.di
+package com.template.app.di
 
 import dagger.Module
 

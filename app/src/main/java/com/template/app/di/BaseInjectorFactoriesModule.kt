@@ -1,4 +1,4 @@
-package com.template.library.di
+package com.template.app.di
 
 import com.template.client.di.injector.Injector
 import com.template.client.di.injector.InjectorProvider
