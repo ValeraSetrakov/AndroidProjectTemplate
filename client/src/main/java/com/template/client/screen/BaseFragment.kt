@@ -13,17 +13,16 @@ import androidx.viewbinding.ViewBinding
 import com.template.client.di.injector.Injector
 import com.template.client.di.injector.InjectorProvider
 import com.template.client.di.injector.InjectorTarget
-import com.template.client.screen.viewmodel.FragmentComicViewModel
+import com.template.client.screen.viewmodel.FragmentBaseViewModel
 
 /**
  * Base class for all fragments
  */
-abstract class ComicFragment<BINDING : ViewBinding, VIEW_MODEL : FragmentComicViewModel, INJECTOR_TARGET : InjectorTarget,
+abstract class BaseFragment<BINDING : ViewBinding, VIEW_MODEL : FragmentBaseViewModel, INJECTOR_TARGET : InjectorTarget,
         INJECTOR : Injector<INJECTOR_TARGET>>(
     private val viewModelFactory: ViewModelProvider.Factory,
     private val fragmentFactory: FragmentFactory
-) :
-    Fragment(), ViewModelBindingScreenWithInjector<BINDING, VIEW_MODEL, INJECTOR_TARGET, INJECTOR>,
+) : Fragment(), ViewModelBindingScreenWithInjector<BINDING, VIEW_MODEL, INJECTOR_TARGET, INJECTOR>,
     InjectorTarget, ViewModelCreator<VIEW_MODEL> {
 
     override lateinit var binding: BINDING

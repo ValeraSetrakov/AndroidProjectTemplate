@@ -9,15 +9,15 @@ import androidx.viewbinding.ViewBinding
 import com.template.client.di.injector.Injector
 import com.template.client.di.injector.InjectorProvider
 import com.template.client.di.injector.InjectorTarget
-import com.template.client.screen.viewmodel.ActivityComicViewModel
+import com.template.client.screen.viewmodel.ActivityBaseViewModel
 import javax.inject.Inject
 
 /**
  * Base class for all activities
  */
-abstract class ComicActivity<
+abstract class BaseActivity<
         BINDING : ViewBinding,
-        VIEW_MODEL : ActivityComicViewModel,
+        VIEW_MODEL : ActivityBaseViewModel,
         INJECTOR_TARGET : InjectorTarget,
         INJECTOR : Injector<INJECTOR_TARGET>> :
     AppCompatActivity(),

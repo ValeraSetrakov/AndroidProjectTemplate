@@ -6,7 +6,7 @@ import androidx.viewbinding.ViewBinding
 import com.template.client.di.injector.Injector
 import com.template.client.di.injector.InjectorProvider
 import com.template.client.di.injector.InjectorTarget
-import com.template.client.screen.viewmodel.ComicViewModel
+import com.template.client.screen.viewmodel.BaseViewModel
 
 /**
  * Base interface for screen with view biding
@@ -18,14 +18,14 @@ interface BindingScreen<BINDING : ViewBinding> {
 /**
  * Base interface for screen with view model
  */
-interface ViewModelScreen<VIEW_MODEL : ComicViewModel> {
+interface ViewModelScreen<VIEW_MODEL : BaseViewModel> {
     var viewModel: VIEW_MODEL
 }
 
 /**
  * interface for marker class that can create view models
  */
-interface ViewModelCreator<VIEW_MODEL : ComicViewModel> {
+interface ViewModelCreator<VIEW_MODEL : BaseViewModel> {
     val viewModelClazz: Class<VIEW_MODEL>
 
     fun createViewModel(
@@ -33,7 +33,7 @@ interface ViewModelCreator<VIEW_MODEL : ComicViewModel> {
         factory: ViewModelProvider.Factory
     ): VIEW_MODEL = createViewModel(store, factory, viewModelClazz)
 
-    fun <T : ComicViewModel> createViewModel(
+    fun <T : BaseViewModel> createViewModel(
         store: ViewModelStore,
         factory: ViewModelProvider.Factory,
         viewModelClazz: Class<T>
@@ -57,12 +57,12 @@ interface InjectableScreen<INJECTOR_TARGET : InjectorTarget, INJECTOR : Injector
 /**
  * Combination of view model and binding screen interface
  */
-interface ViewModelBindingScreen<BINDING : ViewBinding, VIEW_MODEL : ComicViewModel> :
+interface ViewModelBindingScreen<BINDING : ViewBinding, VIEW_MODEL : BaseViewModel> :
     BindingScreen<BINDING>, ViewModelScreen<VIEW_MODEL>
 
 /**
  * Combination of view model, binding and injector screen interface
  */
-interface ViewModelBindingScreenWithInjector<BINDING : ViewBinding, VIEW_MODEL : ComicViewModel,
+interface ViewModelBindingScreenWithInjector<BINDING : ViewBinding, VIEW_MODEL : BaseViewModel,
         INJECTOR_TARGET : InjectorTarget, INJECTOR : Injector<INJECTOR_TARGET>> :
     ViewModelBindingScreen<BINDING, VIEW_MODEL>, InjectableScreen<INJECTOR_TARGET, INJECTOR>
