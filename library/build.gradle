@@ -1,4 +1,5 @@
 apply from: '../commonLibModule.gradle'
+apply plugin: 'com.github.dcendents.android-maven'
 apply from: '../config.gradle'
 
 def config = extensions.getByName("ext")
