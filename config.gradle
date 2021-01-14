@@ -1,6 +1,7 @@
 ext {
     applicationName = "Test"
     applicationId = "com.template"
+    libGroup = "com.template"
 
     versionCode = 1
     versionName = "1.0"
