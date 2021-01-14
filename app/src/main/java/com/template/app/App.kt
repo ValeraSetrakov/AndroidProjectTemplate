@@ -23,7 +23,6 @@ class App : Application(), InjectorProvider {
 
     override fun <T: InjectorTarget, I : Injector<T>> provide(clazz: Class<T>): I? {
         return injectorProvider.provide(clazz)
-        return null
     }
 
     companion object {
