@@ -2,7 +2,7 @@ package com.template.app.di
 
 import android.app.Application
 import android.content.Context
-import com.template.library.BaseApp
+import com.template.app.App
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -17,11 +17,11 @@ import javax.inject.Singleton
     ]
 )
 class ApplicationModule(
-        private val baseApp: BaseApp
+    private val baseApp: App
 ) {
     @Provides
     @Singleton
-    fun provideApp(): BaseApp = baseApp
+    fun provideApp(): App = baseApp
 
     @Provides
     @Singleton
