@@ -15,6 +15,5 @@ android {
 
 dependencies {
 //    implementation 'com.github.ValeraSetrakov:AndroidProjectTemplate:1.0.5'
-    implementation 'com.github.jitpack:android-example:2.2'
-//    implementation project(':library')
+    implementation project(':library')
 }
