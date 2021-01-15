@@ -14,8 +14,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.ValeraSetrakov:AndroidProjectTemplate:1.0.10'
-    implementation 'com.github.ValeraSetrakov:AndroidProjectTemplate:client:1.0.10'
-    implementation 'com.github.ValeraSetrakov:AndroidProjectTemplate:base:1.0.10'
-//    implementation project(':library')
+//    implementation 'com.github.ValeraSetrakov:AndroidProjectTemplate:1.0.10'
+    implementation project(':library')
 }

@@ -4,6 +4,9 @@ import android.app.Application
 import com.template.app.di.ApplicationComponent
 import com.template.app.di.ApplicationModule
 import com.template.app.di.DaggerApplicationComponent
+import com.template.library.client.di.injector.Injector
+import com.template.library.client.di.injector.InjectorProvider
+import com.template.library.client.di.injector.InjectorTarget
 import javax.inject.Inject
 
 class App : Application(), InjectorProvider {
