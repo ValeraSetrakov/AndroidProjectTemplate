@@ -1,4 +1,4 @@
-package com.template.client.screen
+package com.template.library.client.screen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentFactory
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import com.template.client.di.injector.Injector
-import com.template.client.di.injector.InjectorProvider
-import com.template.client.di.injector.InjectorTarget
-import com.template.client.screen.viewmodel.ActivityBaseViewModel
+import com.template.library.client.di.injector.Injector
+import com.template.library.client.di.injector.InjectorProvider
+import com.template.library.client.di.injector.InjectorTarget
+import com.template.library.client.screen.viewmodel.ActivityBaseViewModel
 import javax.inject.Inject
 
 /**

@@ -1,9 +1,9 @@
 package com.template.app.di
 
-import com.template.client.di.injector.Injector
-import com.template.client.di.injector.InjectorProvider
-import com.template.client.di.injector.InjectorTarget
-import com.template.client.di.injector.SimpleInjectorProvider
+import com.template.library.client.di.injector.Injector
+import com.template.library.client.di.injector.InjectorProvider
+import com.template.library.client.di.injector.InjectorTarget
+import com.template.library.client.di.injector.SimpleInjectorProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.Multibinds

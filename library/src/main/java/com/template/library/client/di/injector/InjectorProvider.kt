@@ -1,4 +1,4 @@
-package com.template.client.di.injector
+package com.template.library.client.di.injector
 
 /**
  * Interface for classes that can provide injectors for another classes

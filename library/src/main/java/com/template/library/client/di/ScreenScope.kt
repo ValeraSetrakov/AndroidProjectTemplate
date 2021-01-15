@@ -1,4 +1,4 @@
-package com.template.client.di
+package com.template.library.client.di
 
 import javax.inject.Scope
 

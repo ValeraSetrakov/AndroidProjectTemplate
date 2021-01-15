@@ -1,4 +1,4 @@
-package com.template.base
+package com.template.library.base
 
 fun Int?.orDefault(default: Int = 0): Int = this ?: default
 

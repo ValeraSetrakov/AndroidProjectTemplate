@@ -1,4 +1,4 @@
-package com.template.client.di.fragment
+package com.template.library.client.di.fragment
 
 import dagger.MapKey
 

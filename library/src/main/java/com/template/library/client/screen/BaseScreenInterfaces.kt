@@ -1,12 +1,12 @@
-package com.template.client.screen
+package com.template.library.client.screen
 
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStore
 import androidx.viewbinding.ViewBinding
-import com.template.client.di.injector.Injector
-import com.template.client.di.injector.InjectorProvider
-import com.template.client.di.injector.InjectorTarget
-import com.template.client.screen.viewmodel.BaseViewModel
+import com.template.library.client.di.injector.Injector
+import com.template.library.client.di.injector.InjectorProvider
+import com.template.library.client.di.injector.InjectorTarget
+import com.template.library.client.screen.viewmodel.BaseViewModel
 
 /**
  * Base interface for screen with view biding

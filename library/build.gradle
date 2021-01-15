@@ -19,9 +19,6 @@ android {
 }
 
 dependencies {
-    api project(':client')
-    api project(':base')
-
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     api "androidx.appcompat:appcompat:$androidxVersion"
     api "com.squareup.retrofit2:retrofit:$retrofitVersion"

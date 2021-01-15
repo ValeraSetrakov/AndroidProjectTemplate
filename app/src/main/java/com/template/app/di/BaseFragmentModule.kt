@@ -1,7 +1,7 @@
 package com.template.app.di
 
 import androidx.fragment.app.FragmentFactory
-import com.template.client.di.fragment.BaseFragmentFactory
+import com.template.library.client.di.fragment.BaseFragmentFactory
 import dagger.Binds
 import dagger.Module
 

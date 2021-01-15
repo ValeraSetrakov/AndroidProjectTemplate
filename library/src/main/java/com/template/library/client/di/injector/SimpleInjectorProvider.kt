@@ -1,4 +1,4 @@
-package com.template.client.di.injector
+package com.template.library.client.di.injector
 
 import javax.inject.Inject
 import javax.inject.Provider

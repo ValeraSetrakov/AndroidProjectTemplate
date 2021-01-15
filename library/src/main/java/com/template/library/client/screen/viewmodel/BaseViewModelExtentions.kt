@@ -1,4 +1,4 @@
-package com.template.client.screen.viewmodel
+package com.template.library.client.screen.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

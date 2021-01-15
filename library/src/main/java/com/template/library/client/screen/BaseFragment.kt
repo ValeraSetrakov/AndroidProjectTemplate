@@ -1,4 +1,4 @@
-package com.template.client.screen
+package com.template.library.client.screen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import com.template.client.di.injector.Injector
-import com.template.client.di.injector.InjectorProvider
-import com.template.client.di.injector.InjectorTarget
-import com.template.client.screen.viewmodel.FragmentBaseViewModel
+import com.template.library.client.di.injector.Injector
+import com.template.library.client.di.injector.InjectorProvider
+import com.template.library.client.di.injector.InjectorTarget
+import com.template.library.client.screen.viewmodel.FragmentBaseViewModel
 
 /**
  * Base class for all fragments

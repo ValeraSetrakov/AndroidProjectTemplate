@@ -1,7 +1,7 @@
 package com.template.app.di
 
 import androidx.lifecycle.ViewModelProvider
-import com.template.client.di.viewmodel.ViewModelFactory
+import com.template.library.client.di.viewmodel.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 

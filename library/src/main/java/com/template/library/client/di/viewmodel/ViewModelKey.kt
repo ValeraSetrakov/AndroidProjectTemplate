@@ -1,9 +1,10 @@
-package com.template.client.di.injector
+package com.template.library.client.di.viewmodel
 
+import androidx.lifecycle.ViewModel
 import dagger.MapKey
 import kotlin.reflect.KClass
 
 @Target(AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY_GETTER, AnnotationTarget.PROPERTY_SETTER)
 @kotlin.annotation.Retention(AnnotationRetention.RUNTIME)
 @MapKey
-annotation class InjectorFactoryKey(val value: KClass<out InjectorTarget>)
+annotation class ViewModelKey(val value: KClass<out ViewModel>)
