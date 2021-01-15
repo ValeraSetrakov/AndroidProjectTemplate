@@ -1,4 +1,4 @@
-apply from: '../commonLibModule.gradle'
+apply from: '../commonScreenModule.gradle'
 apply from: '../config.gradle'
 
 def config = extensions.getByName("ext")

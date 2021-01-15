@@ -23,6 +23,4 @@ dependencies {
     implementation "androidx.core:core-ktx:$androidxKtxVersion"
     implementation "androidx.fragment:fragment-ktx:$androidxKtxVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidxVersion"
-
-    implementation project(':base')
 }
