@@ -1,11 +1,7 @@
 apply from: '../commonLibModule.gradle'
-apply plugin: 'maven-publish'
 apply from: '../config.gradle'
 
 def config = extensions.getByName("ext")
-
-group = 'com.template'
-version = '1.0.5'
 
 android {
     defaultConfig {
@@ -25,23 +21,8 @@ android {
 dependencies {
     api project(':client')
     api project(':base')
-    api project(':domain')
 
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     api "androidx.appcompat:appcompat:$androidxVersion"
     api "com.squareup.retrofit2:retrofit:$retrofitVersion"
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.template'
-                artifactId = 'android-template'
-                version = '1.0.5'
-            }
-        }
-    }
 }

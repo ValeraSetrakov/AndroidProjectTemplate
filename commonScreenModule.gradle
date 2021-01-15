@@ -25,5 +25,4 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidxVersion"
 
     implementation project(':base')
-    implementation project(':domain')
 }

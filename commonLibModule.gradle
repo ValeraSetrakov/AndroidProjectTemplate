@@ -1,2 +1,21 @@
 apply plugin: 'com.android.library'
 apply from: '../commonModule.gradle'
+apply plugin: 'maven-publish'
+apply from: '../config.gradle'
+
+group = libGroup
+version = versionName
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = group
+                artifactId = project.name
+                version = version
+            }
+        }
+    }
+}
