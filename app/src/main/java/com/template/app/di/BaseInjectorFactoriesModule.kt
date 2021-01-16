@@ -1,11 +1,11 @@
 package com.template.app.di
 
-import com.template.library.client.di.injector.Injector
-import com.template.library.client.di.injector.InjectorProvider
-import com.template.library.client.di.injector.InjectorTarget
-import com.template.library.client.di.injector.SimpleInjectorProvider
+import com.template.app.features.splash.SplashActivity
+import com.template.app.features.splash.SplashActivityInjector
+import com.template.library.client.di.injector.*
 import dagger.Binds
 import dagger.Module
+import dagger.multibindings.IntoMap
 import dagger.multibindings.Multibinds
 
 @Module(
@@ -18,4 +18,9 @@ abstract class BaseInjectorFactoriesModule {
 
     @Multibinds
     abstract fun emptyInjectorsMap(): Map<Class<out InjectorTarget>, Injector.Factory<*, *>>
+
+    @Binds
+    @IntoMap
+    @InjectorFactoryKey(SplashActivity::class)
+    abstract fun bindSplashActivityInjectorFactory(factory: SplashActivityInjector.Factory): Injector.Factory<*, *>
 }
