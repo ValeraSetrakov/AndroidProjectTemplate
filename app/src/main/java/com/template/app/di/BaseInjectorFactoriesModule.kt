@@ -8,9 +8,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import dagger.multibindings.Multibinds
 
-@Module(
-    includes = []
-)
+@Module
 abstract class BaseInjectorFactoriesModule {
 
     @Binds

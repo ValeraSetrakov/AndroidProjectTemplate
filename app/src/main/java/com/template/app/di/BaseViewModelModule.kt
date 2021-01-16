@@ -8,13 +8,15 @@ import com.template.library.client.di.viewmodel.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import dagger.multibindings.Multibinds
 
-@Module(
-    includes = []
-)
+@Module
 abstract class BaseViewModelModule {
     @Binds
     abstract fun bindViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
+
+    @Multibinds
+    abstract fun emptyInjectorsMap(): Map<Class<out ViewModel>, ViewModel>
 
     @Binds
     @IntoMap

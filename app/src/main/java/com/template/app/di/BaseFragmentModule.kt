@@ -7,9 +7,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.Multibinds
 
-@Module(
-    includes = []
-)
+@Module
 abstract class BaseFragmentModule {
     @Binds
     abstract fun bindFragmentFactory(
