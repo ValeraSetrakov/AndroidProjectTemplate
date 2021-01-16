@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply from: '../config.gradle'
-apply from: '../commonModule.gradle'
+apply from: '../commonScreenModule.gradle'
 
 def config = extensions.getByName("ext")
 
@@ -11,9 +11,12 @@ android {
         versionCode config["versionCode"]
         versionName config["versionName"]
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
-//    implementation 'com.github.ValeraSetrakov:AndroidProjectTemplate:1.0.10'
-    implementation project(':library')
+    implementation 'com.github.ValeraSetrakov:AndroidProjectTemplate:1.0.12'
 }

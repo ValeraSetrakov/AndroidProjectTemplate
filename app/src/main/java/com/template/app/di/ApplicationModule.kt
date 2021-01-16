@@ -17,17 +17,17 @@ import javax.inject.Singleton
     ]
 )
 class ApplicationModule(
-    private val baseApp: App
+    private val app: App
 ) {
     @Provides
     @Singleton
-    fun provideApp(): App = baseApp
+    fun provideApp(): App = app
 
     @Provides
     @Singleton
-    fun provideApplication(): Application = baseApp
+    fun provideApplication(): Application = app
 
     @Provides
     @Singleton
-    fun provideContext(): Context = baseApp
+    fun provideContext(): Context = app
 }

@@ -1,5 +1,4 @@
 // Основная конфигурация для Android
-
 apply from: '../config.gradle'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'

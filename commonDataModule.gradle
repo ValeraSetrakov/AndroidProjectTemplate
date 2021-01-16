@@ -1,1 +1,1 @@
-apply from: '../commonLibModule.gradle'
+apply from: '../commonUiLibModule.gradle'

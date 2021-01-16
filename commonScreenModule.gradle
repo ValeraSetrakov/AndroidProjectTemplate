@@ -1,4 +1,4 @@
-apply from: '../commonLibModule.gradle'
+apply from: '../commonModule.gradle'
 
 android {
     buildFeatures {
@@ -9,8 +9,6 @@ android {
 dependencies {
 
     implementation "androidx.appcompat:appcompat:$androidxVersion"
-    implementation "androidx.coordinatorlayout:coordinatorlayout:$versionCoordinator"
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$versionSwipeToRefresh"
     implementation "com.google.android.material:material:$versionMaterial"
 
     // ViewModel
@@ -22,5 +20,4 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     implementation "androidx.core:core-ktx:$androidxKtxVersion"
     implementation "androidx.fragment:fragment-ktx:$androidxKtxVersion"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidxVersion"
 }
