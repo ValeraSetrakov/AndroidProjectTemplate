@@ -51,6 +51,6 @@ abstract class BaseActivity<
 
     override fun onDestroy() {
         super.onDestroy()
-        injector = null
+        freeInjector()
     }
 }

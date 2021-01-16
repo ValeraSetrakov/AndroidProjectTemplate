@@ -52,6 +52,10 @@ interface InjectableScreen<INJECTOR_TARGET : InjectorTarget, INJECTOR : Injector
             injector?.inject(this as INJECTOR_TARGET)
         }
     }
+
+    fun freeInjector() {
+        injector = null
+    }
 }
 
 /**

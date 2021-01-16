@@ -8,16 +8,16 @@ android {
 
 dependencies {
 
-    implementation "androidx.appcompat:appcompat:$androidxVersion"
-    implementation "com.google.android.material:material:$versionMaterial"
+    api "androidx.appcompat:appcompat:$androidxVersion"
+    api "com.google.android.material:material:$versionMaterial"
 
     // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
     // Lifecycles only (without ViewModel or LiveData)
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
-    implementation "androidx.core:core-ktx:$androidxKtxVersion"
-    implementation "androidx.fragment:fragment-ktx:$androidxKtxVersion"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
+    api "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    api "androidx.core:core-ktx:$androidxKtxVersion"
+    api "androidx.fragment:fragment-ktx:$androidxKtxVersion"
 }
