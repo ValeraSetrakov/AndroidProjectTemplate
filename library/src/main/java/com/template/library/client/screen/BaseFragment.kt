@@ -10,24 +10,20 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import com.template.library.client.di.injector.Injector
-import com.template.library.client.di.injector.InjectorProvider
 import com.template.library.client.di.injector.InjectorTarget
 import com.template.library.client.screen.viewmodel.FragmentBaseViewModel
 
 /**
  * Base class for all fragments
  */
-abstract class BaseFragment<BINDING : ViewBinding, VIEW_MODEL : FragmentBaseViewModel, INJECTOR_TARGET : InjectorTarget,
-        INJECTOR : Injector<INJECTOR_TARGET>>(
+abstract class BaseFragment<BINDING : ViewBinding, VIEW_MODEL : FragmentBaseViewModel>(
     private val viewModelFactory: ViewModelProvider.Factory,
     private val fragmentFactory: FragmentFactory
-) : Fragment(), ViewModelBindingScreenWithInjector<BINDING, VIEW_MODEL, INJECTOR_TARGET, INJECTOR>,
+) : Fragment(), ViewModelBindingScreen<BINDING, VIEW_MODEL>,
     InjectorTarget, ViewModelCreator<VIEW_MODEL> {
 
     override lateinit var binding: BINDING
     override lateinit var viewModel: VIEW_MODEL
-    override var injector: INJECTOR? = null
 
     protected abstract fun createBinding(
         inflater: LayoutInflater,
@@ -36,7 +32,6 @@ abstract class BaseFragment<BINDING : ViewBinding, VIEW_MODEL : FragmentBaseView
     ): BINDING
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        inject()
         super.onCreate(savedInstanceState)
         viewModel = createViewModel()
     }
@@ -50,16 +45,7 @@ abstract class BaseFragment<BINDING : ViewBinding, VIEW_MODEL : FragmentBaseView
         return binding.root
     }
 
-    private fun inject() {
-        inject(requireContext().applicationContext as? InjectorProvider)
-    }
-
     private fun createViewModel(): VIEW_MODEL = createViewModel(viewModelStore, viewModelFactory)
-
-    override fun onDestroy() {
-        super.onDestroy()
-        injector = null
-    }
 
     fun <T> LiveData<T>.observe(observer: (T) -> Unit) {
         observe(viewLifecycleOwner, Observer { observer(it) })
