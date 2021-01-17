@@ -11,12 +11,13 @@ import javax.inject.Singleton
  */
 @Singleton
 class BaseFragmentFactory @Inject constructor(
-    val fragmentsMaps: Map<String, @JvmSuppressWildcards Provider<Fragment>>
+        val fragmentsMaps: Map<Class<out Fragment>, @JvmSuppressWildcards Provider<Fragment>>
 ) : FragmentFactory() {
 
     override fun instantiate(classLoader: ClassLoader, className: String): Fragment {
         return kotlin.runCatching {
-            fragmentsMaps[className]?.get() ?: super.instantiate(classLoader, className)
+            val cl = Class.forName(className)
+            fragmentsMaps[cl]?.get() ?: super.instantiate(classLoader, className)
         }.fold(
             { it },
             { super.instantiate(classLoader, className) }

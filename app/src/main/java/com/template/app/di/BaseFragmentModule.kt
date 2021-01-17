@@ -13,6 +13,6 @@ abstract class BaseFragmentModule {
 
     @Binds
     @IntoMap
-    @FragmentKey("com.template.app.features.splash.fragment.SplashFragment")
+    @FragmentKey(SplashFragment::class)
     abstract fun bind(fragment: SplashFragment): Fragment
 }

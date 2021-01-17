@@ -18,5 +18,5 @@ abstract class FragmentModule {
     ): FragmentFactory
 
     @Multibinds
-    abstract fun emptyInjectorsMap(): Map<String, Fragment>
+    abstract fun emptyInjectorsMap(): Map<Class<out Fragment>, Fragment>
 }
