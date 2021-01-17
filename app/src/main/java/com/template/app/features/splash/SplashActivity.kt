@@ -1,6 +1,10 @@
 package com.template.app.features.splash
 
+import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
+import com.template.app.features.splash.fragment.SplashFragment
 import com.template.library.client.screen.BaseActivity
 import com.template.screen_marvel.databinding.ActivitySplashBinding
 
@@ -13,4 +17,14 @@ class SplashActivity :
 
     override val viewModelClazz: Class<SplashActivityViewModel> =
         SplashActivityViewModel::class.java
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add<SplashFragment>(binding.fragmentContainerView.id)
+            }
+        }
+    }
 }
