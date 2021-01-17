@@ -2,6 +2,7 @@ package com.template.library.client.screen
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.annotation.CallSuper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentFactory
 import androidx.lifecycle.ViewModelProvider
@@ -35,20 +36,35 @@ abstract class BaseActivity<
 
     protected abstract fun createBinding(inflater: LayoutInflater): BINDING
 
+    @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
         inject()
         supportFragmentManager.fragmentFactory = this.fragmentFactory
         super.onCreate(savedInstanceState)
         viewModel = createViewModel()
-        binding = createBinding(inflater = layoutInflater)
+        binding = createBinding()
         setContentView(binding.root)
+        if (savedInstanceState == null) {
+            onFirstCreate()
+        }
     }
 
     private fun inject() = inject(application as? InjectorProvider)
 
-    private fun createViewModel(): VIEW_MODEL =
-        createViewModel(viewModelStore, viewModelFactory)
+    private fun createViewModel(): VIEW_MODEL {
+        return createViewModel(viewModelStore, viewModelFactory)
+    }
 
+    private fun createBinding(): BINDING {
+        return createBinding(inflater = layoutInflater)
+    }
+
+    /**
+     * Called when activity first create (if savedInstanceState == null)
+     */
+    protected open fun onFirstCreate() {}
+
+    @CallSuper
     override fun onDestroy() {
         super.onDestroy()
         freeInjector()

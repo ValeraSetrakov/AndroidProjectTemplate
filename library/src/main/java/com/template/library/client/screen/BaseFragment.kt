@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.CallSuper
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 import com.template.library.client.di.injector.InjectorTarget
@@ -31,15 +31,17 @@ abstract class BaseFragment<BINDING : ViewBinding, VIEW_MODEL : FragmentBaseView
         attachToRoot: Boolean
     ): BINDING
 
+    @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = createViewModel()
     }
 
+    @CallSuper
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         binding = createBinding(inflater, container, false)
         return binding.root
@@ -48,6 +50,6 @@ abstract class BaseFragment<BINDING : ViewBinding, VIEW_MODEL : FragmentBaseView
     private fun createViewModel(): VIEW_MODEL = createViewModel(viewModelStore, viewModelFactory)
 
     fun <T> LiveData<T>.observe(observer: (T) -> Unit) {
-        observe(viewLifecycleOwner, Observer { observer(it) })
+        observe(viewLifecycleOwner) { observer(it) }
     }
 }
