@@ -11,7 +11,7 @@ import dagger.multibindings.Multibinds
  * Base module for providing [ViewModelProvider].[Factory]
  */
 @Module
-abstract class FragmentModule {
+abstract class BaseFragmentModule {
     @Binds
     abstract fun bindFragmentFactory(
             fragmentFactory: BaseFragmentFactory

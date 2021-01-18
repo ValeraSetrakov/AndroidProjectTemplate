@@ -8,13 +8,13 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module(
-    includes = [
-        SubComponentsModule::class,
-        BaseViewModelModule::class,
-        BaseInjectorFactoriesModule::class,
-        DataModule::class,
-        BaseFragmentModule::class
-    ]
+        includes = [
+            SubComponentsModule::class,
+            ViewModeslModule::class,
+            InjectorFactoriesModule::class,
+            DataModule::class,
+            FragmentsModule::class
+        ]
 )
 class ApplicationModule(
     private val app: App

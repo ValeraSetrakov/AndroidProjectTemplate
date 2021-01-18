@@ -10,7 +10,7 @@ import dagger.multibindings.Multibinds
  * Base module for providing [ViewModelProvider].[Factory]
  */
 @Module
-abstract class ViewModelModule {
+abstract class BaseViewModelModule {
     @Binds
     abstract fun bindViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
 

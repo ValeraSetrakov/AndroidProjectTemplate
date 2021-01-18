@@ -8,7 +8,7 @@ import dagger.multibindings.Multibinds
  * Base module for providing [Injector].[Factory]
  */
 @Module
-abstract class InjectorModule {
+abstract class BaseInjectorModule {
     @Binds
     abstract fun bindInjectorProvider(injectorProvider: SimpleInjectorProvider): InjectorProvider
 
