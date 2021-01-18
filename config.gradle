@@ -34,7 +34,7 @@ ext {
     httpLoggingInterceptor = '4.3.1'
 
     //glide
-    glideVersion = '4.8.0'                      //http://bit.ly/2Q7Fa41
+    glideVersion = '4.11.0'                      //http://bit.ly/2Q7Fa41
 
     //test
     androidxTestVersion = '1.1.0'               //http://bit.ly/2P1yKi1
