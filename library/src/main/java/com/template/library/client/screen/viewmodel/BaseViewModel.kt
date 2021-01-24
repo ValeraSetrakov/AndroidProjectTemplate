@@ -17,3 +17,8 @@ abstract class ActivityBaseViewModel(application: Application) : BaseViewModel(a
  * Base view model for all fragments
  */
 abstract class FragmentBaseViewModel(application: Application) : BaseViewModel(application)
+
+/**
+ * Base view model for all dialogs
+ */
+abstract class DialogBaseViewModel(application: Application) : BaseViewModel(application)
