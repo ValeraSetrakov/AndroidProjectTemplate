@@ -15,8 +15,12 @@ class ListFragmentViewModel @Inject constructor(
     val items: LiveData<Pair<List<Item1>, List<Item2>>> = mutableItems.toLiveData()
 
     fun generateItems() {
-        val items1 = listOf<Item1>(Item1("Title 1"), Item1("Title 2"), Item1("Title 3"))
-        val items2 = listOf<Item2>(
+        val items1 = listOf(
+            Item1("Title 1"),
+            Item1("Title 2"),
+            Item1("Title 3")
+        )
+        val items2 = listOf(
             Item2("Title 1", "Message 1"),
             Item2("Title 2", "Message 2"),
             Item2("Title 3", "Message 3")
