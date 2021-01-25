@@ -11,7 +11,7 @@
         android:name="com.template.app.App">
 
         <activity
-            android:name="com.template.app.features.splash.SplashActivity"
+            android:name="com.template.app.features.TestActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

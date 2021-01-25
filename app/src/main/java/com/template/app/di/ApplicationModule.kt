@@ -10,7 +10,7 @@ import javax.inject.Singleton
 @Module(
         includes = [
             SubComponentsModule::class,
-            ViewModeslModule::class,
+            ViewModelsModule::class,
             InjectorFactoriesModule::class,
             DataModule::class,
             FragmentsModule::class

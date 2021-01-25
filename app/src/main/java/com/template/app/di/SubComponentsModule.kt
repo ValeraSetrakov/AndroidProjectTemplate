@@ -1,9 +1,9 @@
 package com.template.app.di
 
-import com.template.app.features.splash.SplashActivityInjector
+import com.template.app.features.TestActivityInjector
 import dagger.Module
 
 @Module(
-    subcomponents = [SplashActivityInjector::class]
+        subcomponents = [TestActivityInjector::class]
 )
 class SubComponentsModule

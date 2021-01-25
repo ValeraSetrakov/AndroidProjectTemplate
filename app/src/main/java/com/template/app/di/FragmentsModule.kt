@@ -1,7 +1,7 @@
 package com.template.app.di
 
 import androidx.fragment.app.Fragment
-import com.template.app.features.splash.fragment.SplashFragment
+import com.template.app.features.test.TestFragment
 import com.template.library.client.di.fragment.BaseFragmentModule
 import com.template.library.client.di.fragment.FragmentKey
 import dagger.Binds
@@ -13,6 +13,6 @@ abstract class FragmentsModule {
 
     @Binds
     @IntoMap
-    @FragmentKey(SplashFragment::class)
-    abstract fun bind(fragment: SplashFragment): Fragment
+    @FragmentKey(TestFragment::class)
+    abstract fun bindTestFragment(fragment: TestFragment): Fragment
 }
