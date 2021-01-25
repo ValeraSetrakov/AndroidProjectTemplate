@@ -5,13 +5,13 @@ import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import com.template.app.features.test.TestFragment
 import com.template.library.client.screen.BaseActivity
-import com.template.screen_marvel.databinding.ActivitySplashBinding
+import com.template.screen_marvel.databinding.ActivityTestBinding
 
 class TestActivity :
-        BaseActivity<ActivitySplashBinding, TestActivityViewModel, TestActivity, TestActivityInjector>() {
+        BaseActivity<ActivityTestBinding, TestActivityViewModel, TestActivity, TestActivityInjector>() {
 
-    override fun createBinding(inflater: LayoutInflater): ActivitySplashBinding {
-        return ActivitySplashBinding.inflate(inflater)
+    override fun createBinding(inflater: LayoutInflater): ActivityTestBinding {
+        return ActivityTestBinding.inflate(inflater)
     }
 
     override val viewModelClazz: Class<TestActivityViewModel> =
